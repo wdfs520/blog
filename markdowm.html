@@ -5,13 +5,28 @@
     <title>markdown</title>
 </head>
 <body>
+<textarea id="content">
+    #一级标题#
+    ##二级标题##
+    ###三级标题###
+    ####四级标题####
+    #####五级标题#####
+    ######六级标题######
+</textarea>
 
-#一级标题#
-##二级标题##
-###三级标题###
-####四级标题####
-#####五级标题#####
-######六级标题######
-
+<div id="result"></div>
+<script src="https://cdn.bootcss.com/showdown/1.9.0/showdown.min.js"></script>
+<script>
+    function compile(){
+        //获取要转换的文字
+        var text = document.getElementById("content").value;
+        //创建实例
+        var converter = new showdown.Converter();
+        //进行转换
+        var html = converter.makeHtml(text);
+        //展示到对应的地方  result便是id名称
+        document.getElementById("result").innerHTML = html;
+    }
+</script>
 </body>
 </html>
