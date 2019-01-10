@@ -5,21 +5,17 @@
     <title>markdown</title>
 </head>
 <body>
-<textarea id="content">
-    #一级标题#
-    ##二级标题##
-    ###三级标题###
-    ####四级标题####
-    #####五级标题#####
-    ######六级标题######
-</textarea>
+<!--<div id="basic"># 一级标题 ## 二级标题</div>-->
+<div id="result"># success</div>
 
-<div id="result"></div>
+<p><b>自由域名：</b><a href="git.shuchengxian.com/">git.shuchengxian.com</a></p>
+<p><b>github:</b><a href="https://wdfs520.github.io/blog/"> https://wdfs520.github.io/blog/</a></p>
+-- by 2019-01-10 NanJing
 <script src="https://cdn.bootcss.com/showdown/1.9.0/showdown.min.js"></script>
 <script>
-    function compile(){
+    window.onload = function () {
         //获取要转换的文字
-        var text = document.getElementById("content").value;
+        var text = document.getElementById("result").innerHTML;
         //创建实例
         var converter = new showdown.Converter();
         //进行转换
